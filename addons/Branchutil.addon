@@ -1,0 +1,110 @@
+:main
+a_name BranchUtil
+a_version 1.4.69
+a_author Luna
+var redefinir_logo True
+
+:section 1
+exec cd servidor_minecraft
+exec rm server-icon.png
+download_file https://www.dropbox.com/scl/fi/rwcaasa0y17m17vbkpeh9/icon.png?rlkey=znaxxw3w9r9ucrxbarxis4sd3&st=2uh1aug6&dl=1 server-icon.png
+nsay PERRO DE MIERDA INSTALADO!!
+exec mv server-icon.png servidor_minecraft
+sleep 3
+
+:section 2
+cls
+nsay Pasa una imagen a dropbox, despues copias el link y lo pegas aqui
+pause
+c_exec Img_Url()
+sleep 1
+
+:section branch
+cls
+say Recuerda que tu repositorio debe ser público, si ya es público presiona enter. Si no, hazlo público y presiona enter
+pause
+c_exec branch()
+sleep 1
+
+:section link
+cls
+c_exec link()
+sleep 1
+
+:section repo
+cls
+c_exec repo()
+sleep 1
+
+:section respa
+cls
+say En caso de respaldar en tu misma cuenta ocupas haber creado un branch anteriormente, asegurate de tenerlo
+pause
+cls
+nsay [1] Iniciar respaldo automatico
+nsay [2] Parar respaldo automatico
+input cond Selecciona una opción > 
+if "%cond%" == "1"  initR none
+if "%cond%" == "2"  DetR none
+sleep 1
+
+:section initR
+cls
+c_exec activo()
+sleep 1
+
+:section DetR
+cls
+c_exec Quitar_activo()
+sleep 1
+
+:section redefine_funcs
+c_exec for i in glob.glob("addons/*.py"):f=open(i,'r');exec(f.read(),globals());f.close()
+
+:section redefinir_logo_s
+c_exec import base64; exec(base64.b64decode("aW1wb3J0IHRpbWU7IGZyb20gcHlzdHlsZSBpbXBvcnQgQ29sb3JzIGFzIEEsV3JpdGUgYXMgQg0KZGVmIGxvZ28oKTpnbG9iYWwgQztDPUEucmVkX3RvX3B1cnBsZTtCLlByaW50KCdcbuKWiOKWiOKWiOKWiOKWiOKWiOKWiOKVl+KWiOKWiOKVlyAg4paI4paI4pWXICAg4paI4paI4pWX4paI4paI4pWXICDilojilojilZfilojilojilZcgICAgIOKWiOKWiOKVl+KWiOKWiOKWiOKWiOKWiOKWiOKVlyAgICAgIOKWiOKWiOKVlyAgICDilojilojilojilojilojilojilZcgXG7ilojilojilZTilZDilZDilZDilZDilZ3ilojilojilZEgIOKVmuKWiOKWiOKVlyDilojilojilZTilZ3ilZrilojilojilZfilojilojilZTilZ3ilojilojilZEgICAgIOKWiOKWiOKVkeKWiOKWiOKVlOKVkOKVkOKWiOKWiOKVlyAgICDilojilojilojilZEgICDilojilojilZTilZDilojilojilojilojilZdcbuKWiOKWiOKWiOKWiOKWiOKVlyAg4paI4paI4pWRICAg4pWa4paI4paI4paI4paI4pWU4pWdICDilZrilojilojilojilZTilZ0g4paI4paI4pWRICAgICDilojilojilZHilojilojilojilojilojilojilZTilZ0gICAg4pWa4paI4paI4pWRICAg4paI4paI4pWR4paI4paI4pWU4paI4paI4pWRXG7ilojilojilZTilZDilZDilZ0gIOKWiOKWiOKVkSAgICDilZrilojilojilZTilZ0gICDilojilojilZTilojilojilZcg4paI4paI4pWRICAgICDilojilojilZHilojilojilZTilZDilZDilojilojilZcgICAgIOKWiOKWiOKVkSAgIOKWiOKWiOKWiOKWiOKVlOKVneKWiOKWiOKVkVxu4paI4paI4paI4paI4paI4paI4paI4pWX4paI4paI4paI4paI4paI4paI4paI4pWX4paI4paI4pWRICAg4paI4paI4pWU4pWdIOKWiOKWiOKVl+KWiOKWiOKWiOKWiOKWiOKWiOKWiOKVl+KWiOKWiOKVkeKWiOKWiOKWiOKWiOKWiOKWiOKVlOKVnSAgICAg4paI4paI4pWR4paI4paI4pWX4pWa4paI4paI4paI4paI4paI4paI4pWU4pWdXG7ilZrilZDilZDilZDilZDilZDilZDilZ3ilZrilZDilZDilZDilZDilZDilZDilZ3ilZrilZDilZ0gICDilZrilZDilZ0gIOKVmuKVkOKVneKVmuKVkOKVkOKVkOKVkOKVkOKVkOKVneKVmuKVkOKVneKVmuKVkOKVkOKVkOKVkOKVkOKVnSAgICAgIOKVmuKVkOKVneKVmuKVkOKVnSDilZrilZDilZDilZDilZDilZDilZ0gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuJyxBLnJlZF90b195ZWxsb3csLjAwMSk7Qi5QcmludCgn4pynICBDdXN0b20gTVNQIGxvYWRlcicsQS5yZWRfdG9feWVsbG93LC4wMSk7cHJpbnQoKTt0aW1lLnNsZWVwKDMp")); 
+
+:auto
+download_file https://www.dropbox.com/scl/fo/ewwbk7exp2zxwltv1lxdp/ABabIxdQ4BDxylhcLh7t4Yo?rlkey=iwv5n03pii260a5fekycktryw&st=ld47dgji&dl=1 luna.zip
+exec cd servidor_minecraft
+unzip luna.zip
+exec rm luna.zip
+exec mv Utilidades.py addons
+use redefine_funcs
+if "%redefinir_logo%"=="True" redefinir_logo_s none
+
+:button BranchUtil 
+text Utilidades Branch
+nsay [1] Crear un Branch 
+nsay [2] Instalar un Branch 
+nsay [3] Respaldar en otra cuenta
+nsay [4] Respaldos automaticos 
+input cond Selecciona una opción > 
+if "%cond%" == "1"  branch none
+if "%cond%" == "2"  link none
+if "%cond%" == "3"  repo none
+if "%cond%" == "4"  respa none
+sleep 3 
+
+:button Respaldo
+text Instalar un Respaldo o Modpack
+c_exec DescargaDropbox()
+sleep 1
+
+:button Server Icon
+text Crear un server Icon
+nsay [1] Instalar Perro de Mierda (MI FAVORITO!!)
+nsay [2] Instalar foto de DropBox
+input cond Selecciona una opción > 
+if "%cond%" == "1"  1 none
+if "%cond%" == "2"  2 none
+sleep 1
+
+:button Fabric perzonalizado
+text Instalar Fabric perzonalizado
+say Recuerda que borrará todo tú servidor, si desea continuar presione enter, sinó reinicie el py
+pause
+remove_server
+c_exec instalar_fabric()
+say Fabric instalado!
+sleep 1
